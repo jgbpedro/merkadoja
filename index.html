@@ -1,0 +1,263 @@
+<!-- 
+
+    *********************** Description Work *************
+    Author: Marcel Neves Teixeira
+    Data: Ultima atualização 10/01/18
+    Mudanças: construção da Versão 0 do Site do MerkadoJa
+    Empresa: 3MSolucoes
+    Código: Página Index.html, Arquivos .js e CSS
+    ******************************************************
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Merkadoja</title>
+        <meta charset="utf-8">
+         <meta name="title" content="Merkadoja: Soluções em tecnologias web para sua empresa" />
+        <meta name="url" content="www.merkadoja.com" />
+        <meta name="description" content="Desenvolvimento de soluções Web para sua empresa em Web Design, Design de Marcas, Social Media, Aplicativos e Sistemas Web" />
+        <meta name="keywords" content="web design, design de marcas, social media, aplicativos, sistemas web" />
+        <meta name="charset" content="ISO-8859-1" />
+        <meta name="autor" content="Marcel Neves Teixeira" />
+        <meta name="company" content="Merkadoja" />
+        <meta name="revisit-after" content="10" />
+        
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        
+        <script src="js/jquery152.min.js" type="text/javascript"></script>
+         <script type="text/javascript" src="js/merkadoja_seta.js"></script>
+        <script type="text/javascript" src="js/merkadoja_ancora.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script>
+        $(document).ready(function() {
+            
+            $("#form").submit(function(event){
+                    
+                    //anula a ação do submit tradicional "botao" ou F5
+                     event.preventDefault();
+
+                     $.ajax({
+                        type: "POST",
+                        url: "php/contatos_inserir.php?modo=novo",
+                        data: new FormData($("#form")[0]),
+                        cache:false,
+                        contentType:false,
+                        processData:false,
+                        async:true,
+                        success: function(dados){
+                            // $('.modal').html(dados);
+                            alert('Dados enviados com Sucesso!');
+                            $(".dados").val("");
+                            
+
+                        }
+                    });
+
+                 });
+        });
+        </script>
+    </head>
+    <body>
+        <div class="modal">
+        </div>
+        <!-- AREA DO HEADER, CABEÇALHO DA PÁGINA COM MENU E SLOGAN -->
+        <header>
+        
+            <div id="container_header">
+                <div id="conteudo_header">
+                    <div id="logo">
+                        <img src="imagens/logo.png" alt="logo" title="logo">
+                    </div>
+                    <nav id="menu">
+                        <ul>
+                            <li>HOME</li>
+                            <li><a href="#container_header_branco">SAIBA MAIS</a></li>
+                            <li><a href="#anuncie">ANUNCIE</a></li>
+                            <li><a href="#contato">CONTATE-NOS</a></li>
+                            <li><a href="#baixe">BAIXE NOSSO APP GRÁTIS</a></li>
+                            <li><a href="#">LOGIN</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <div id="celular">
+                        <div id="seta">
+                          <a href="#logo" class="link_seta">
+                            <img src="imagens/seta.png">      
+                          </a>
+                        </div> 
+                    </div>
+                    <div id="slogan">
+                        <h1>Mude a forma de fazer suas compras</h1>
+                        <div class="btnapp">
+                            BAIXE O APP GRÁTIS!
+                        </div>
+                        <div class="btngplay">
+                           
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div id="container_header_branco">
+                <h2> 3 RAZÕES PARA <br> UTILIZAR NOSSOS SERVIÇOS </h2>
+            </div>
+            
+             
+              
+        </header>
+        <!-- SEÇÃO AREA DO CLIENTE -->
+        
+        <section id="area_cliente">
+            
+            <div class="motivos">
+                <figure class="motivos_foto">
+                     <img src="imagens/mercados.png" alt="Trabalho" title="Trabalho">
+                </figure>
+                <article class="motivos_texto">
+                    <h1>TODOS OS MERCADOS EM UM SÓ LUGAR</h1>
+                    <p>
+                        Com o <strong>Merkado Já</strong> você pode fazer sua lista de compra e <span class="destaque">comparar os preços</span> de todos os mercados mais próximo de você. <br><br>Faça suas compras no melhor lugar sem sair de casa.
+                    </p>
+                </article>
+                
+            </div>
+           <div class="motivos">
+                <figure class="motivos_foto">
+                     <img src="imagens/promocao.jpg" alt="Trabalho" title="Trabalho" class="motivos_promocoes">
+                </figure>
+                <article class="motivos_texto">
+                    <h1>AS MELHORES PROMOÇÕES PARA VOCÊ</h1>
+                    <p>
+                        Com o <strong>Merkado Já</strong> você pode acompanhar as <span class="destaque">promoções de supermercados</span> da sua região sem sair do conforto da sua casa.
+                    </p>
+                </article>
+                
+            </div>
+            <div class="motivos">
+                <figure class="motivos_foto">
+                    <img src="imagens/pesado.png" alt="Trabalho" title="Trabalho">
+                </figure>
+
+                <article class="motivos_texto">
+                    <h1>DEIXE O TRABALHO PESADO PARA O <strong>MERKADO JÁ</strong></h1>
+                    <p>
+                         Entregamos suas compras com mais comodidade, você não vai mais precisar sair da sua casa, pegar filas extensas e carregar sacolas pesadas.<br> 
+                        <strong>Baixe o aplicativo</strong> e teste agora mesmo.
+                    </p>
+                </article>
+                
+            </div>
+        </section>
+        
+        <!-- SEÇÃO PARA CHAMADA DO ANUNCINATE, OS MERCADOS  -->
+        <section id="anuncie">
+            
+            <div id="container_anuncie">
+          
+                <div id="anuncie_mulher">
+                    <img src="imagens/mulher_anunciante.png" alt="MerkadoJa - Anuncie" title="MerkadoJa - Anuncie">
+                </div>
+                <h2>ANUNCIE</h2>
+                <p>"DEIXE QUE NÓS FAZEMOS O TRABAHO PESADO PARA VOCÊ"</p>
+                <figure class="auncie_foto">
+                     <img src="imagens/sirene.png" alt="MerkadoJa - Anuncie" title="MerkadoJa - Anuncie">
+                
+                </figure>
+                <div id="anuncie_botao">
+                    Registre-se em nosso site ou faça login para utilizar nossos serviços
+                </div>
+                       
+            </div>
+        
+        </section>
+        
+        <!-- SEÇÃO PARA CHAMAR O INTERNAUTA A FAZER O DOWNLOAD DO APLICATIVO -->
+        <section id="baixe">
+            
+            <h1>BAIXE O APP GRÁTIS <br> <strong>"MERKADO JÁ"</strong></h1>
+                <p>
+                    Baixe agora nosso <strong>aplicativo </strong><br> de forma <strong>gratuita </strong><br> e comece a <strong>economizar </strong><br> de forma rápida e <strong>eficiente </strong><br> com o <strong>Merkado Já !</strong>
+                
+                </p>
+                
+                <div id="baixe_foto">
+            
+            
+                </div>
+                     
+                <div class="btnapp_red">
+                    BAIXE O APP GRÁTIS!
+                </div>
+                <div class="btngplay">
+                           
+                </div>
+           
+        
+        </section>
+        
+        <!-- SEÇÃO DE CONTATOS -->
+        <section id="contato">
+            <div id="container_contato">
+                <h2>CONTATE-NOS</h2>
+                <form id="form" name="frmcontatos" method="post" action=""  enctype="multipart/form-data">
+                    <table id="tblcontatos">
+                        <tr>
+                            <td>
+                                <label>*NOME</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="dados" type="text" name="txtnome" class="caixa" placeholder="SEU NOME" maxlength="90" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>*E-MAIL</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="dados" type="text" name="txtemail" class="caixa" placeholder="SEU E-MAIL@EMAIL" maxlength="90" required>
+                            </td>
+                        </tr>
+                                   <tr>
+                            <td>
+                                <label>*MENSAGEM</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea class="dados" name="txtmensagem" placeholder="SUA MENSAGEM" cols="50" rows="7" required></textarea>
+                            </td>
+                        </tr>
+                          <tr>
+                            <td>
+                                <input type="submit" name="btnsalvar" value="ENVIAR">
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    
+                
+                </form>
+            </div>
+        </section>
+        
+        <!-- FOOTER, AREA DO RODAPÉ DO SITE -->
+        <footer>
+            <div id="container_footer">
+                <figure id="footer_logo">
+                    <img src="imagens/logo.png" alt="logo" title="logo">
+                </figure>
+                <h1>As suas compras <br>de forma diferente e rápida.</h1>
+            </div>
+        
+        </footer>
+        
+    </body>
+</html>
