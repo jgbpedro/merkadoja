@@ -1,11 +1,9 @@
 <!-- 
 
     *********************** Description Work *************
-    Author: Marcel Neves Teixeira
-    Data: Ultima atualização 10/01/18
+    Author: José Guilherme
+    Data: Ultima atualização 19/01/19
     Mudanças: construção da Versão 0 do Site do MerkadoJa
-    Empresa: 3MSolucoes
-    Código: Página Index.html, Arquivos .js e CSS
     ******************************************************
 
 
@@ -32,32 +30,7 @@
         <script type="text/javascript" src="js/merkadoja_ancora.js"></script>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script>
-        $(document).ready(function() {
-            
-            $("#form").submit(function(event){
-                    
-                    //anula a ação do submit tradicional "botao" ou F5
-                     event.preventDefault();
-
-                     $.ajax({
-                        type: "POST",
-                        url: "php/contatos_inserir.php?modo=novo",
-                        data: new FormData($("#form")[0]),
-                        cache:false,
-                        contentType:false,
-                        processData:false,
-                        async:true,
-                        success: function(dados){
-                            // $('.modal').html(dados);
-                            alert('Dados enviados com Sucesso!');
-                            $(".dados").val("");
-                            
-
-                        }
-                    });
-
-                 });
-        });
+        $(document).ready(function(){$("#form").submit(function(event){event.preventDefault();$.ajax({type:"POST",url:"php/contatos_inserir.php?modo=novo",data:new FormData($("#form")[0]),cache:!1,contentType:!1,processData:!1,async:!0,success:function(dados){alert('Dados enviados com Sucesso!');$(".dados").val("")}})})});
         </script>
     </head>
     <body>
@@ -118,7 +91,7 @@
                      <img src="imagens/mercados.png" alt="Trabalho" title="Trabalho">
                 </figure>
                 <article class="motivos_texto">
-                    <h1>TODOS OS MERCADOS EM UM SÓ LUGAR</h1>
+                    <h2>TODOS OS MERCADOS EM UM SÓ LUGAR</h2>
                     <p>
                         Com o <strong>Merkado Já</strong> você pode fazer sua lista de compra e <span class="destaque">comparar os preços</span> de todos os mercados mais próximo de você. <br><br>Faça suas compras no melhor lugar sem sair de casa.
                     </p>
@@ -130,7 +103,7 @@
                      <img src="imagens/promocao.jpg" alt="Trabalho" title="Trabalho" class="motivos_promocoes">
                 </figure>
                 <article class="motivos_texto">
-                    <h1>AS MELHORES PROMOÇÕES PARA VOCÊ</h1>
+                    <h2>AS MELHORES PROMOÇÕES PARA VOCÊ</h2>
                     <p>
                         Com o <strong>Merkado Já</strong> você pode acompanhar as <span class="destaque">promoções de supermercados</span> da sua região sem sair do conforto da sua casa.
                     </p>
@@ -143,7 +116,7 @@
                 </figure>
 
                 <article class="motivos_texto">
-                    <h1>DEIXE O TRABALHO PESADO PARA O <strong>MERKADO JÁ</strong></h1>
+                    <h2>DEIXE O TRABALHO PESADO PARA O <strong>MERKADO JÁ</strong></h2>
                     <p>
                          Entregamos suas compras com mais comodidade, você não vai mais precisar sair da sua casa, pegar filas extensas e carregar sacolas pesadas.<br> 
                         <strong>Baixe o aplicativo</strong> e teste agora mesmo.
@@ -178,7 +151,7 @@
         <!-- SEÇÃO PARA CHAMAR O INTERNAUTA A FAZER O DOWNLOAD DO APLICATIVO -->
         <section id="baixe">
             
-            <h1>BAIXE O APP GRÁTIS <br> <strong>"MERKADO JÁ"</strong></h1>
+            <h2>BAIXE O APP GRÁTIS <br> <strong>"MERKADO JÁ"</strong></h2>
                 <p>
                     Baixe agora nosso <strong>aplicativo </strong><br> de forma <strong>gratuita </strong><br> e comece a <strong>economizar </strong><br> de forma rápida e <strong>eficiente </strong><br> com o <strong>Merkado Já !</strong>
                 
@@ -254,7 +227,7 @@
                 <figure id="footer_logo">
                     <img src="imagens/logo.png" alt="logo" title="logo">
                 </figure>
-                <h1>As suas compras <br>de forma diferente e rápida.</h1>
+                <h2>As suas compras <br>de forma diferente e rápida.</h2>
             </div>
         
         </footer>
