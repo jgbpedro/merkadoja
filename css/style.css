@@ -98,6 +98,25 @@ header{
     
 }
 
+.parallelogram { 
+       width: 100%; 
+       height: 300px;
+       /*margin-top: calc(100% - 500px);*/
+       transform: rotate(-10deg) skew(-10deg);
+       -webkit-transform: rotate(-10deg) skew(-10deg);
+       -moz-transform: rotate(-10deg) skew(-10deg);
+       -o-transform: rotate(-10deg) skew(-10deg);
+       background: red; }
+
+.center{
+ width: 1200px;
+ height: auto;
+ background: white;
+ margin: auto;
+ transform: rotate(10deg) skew(10deg);
+}
+
+
 /*SETA DE NAVEGAÇÃO*/
 #seta{
     width: 50px;
@@ -108,10 +127,6 @@ header{
     border-color: #000000;
     display: none;
     z-index: 999;
-   
-    
-   
-    
     
 }
 #seta img {
@@ -136,6 +151,14 @@ header{
     background-image: url(../imagens/celular.png);
     background-repeat: no-repeat;
 }
+
+#img_app_gif{
+    width: 226px;
+    height: 406px;
+    margin-left: 54px;
+    margin-top: 66px;
+}
+
 
 /*AREA DO MENU E LOGO*/
 #logo{
@@ -274,7 +297,7 @@ header{
     margin: auto;
 }
 
-.motivos_texto h1{
+.motivos_texto h2{
     font-family: Adventure;
     font-size: 2em;
     text-align: center;
@@ -362,7 +385,7 @@ header{
     margin: auto;
 }
 
-#baixe h1{
+#baixe h2{
     font-family: Adventure;
     font-size: 2.1em;
     text-align: center;
@@ -387,7 +410,7 @@ header{
     position: absolute;
     margin-left: 500px;
     margin-top: -202px;
-    background-image: url(../imagens/baixe_celular_pequeno.png);
+    background-image: url(../imagens/baixe_celular_pequeno_fill.png);
     background-repeat: no-repeat;
     background-size: contain;
     
@@ -495,7 +518,7 @@ footer{
     color: #ffffff;
     margin: auto;
 }
-#container_footer h1{
+#container_footer h2{
     font-family: Adventure;
     font-size: 0.8em;
     text-align: center;
